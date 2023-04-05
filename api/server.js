@@ -114,7 +114,7 @@ app.delete("/inventory", (req,res) => {
     });
 })
 
-//INVENTORY PATCH
+//INVENTORY PUT
 app.put("/inventory", (req,res) => {
   let item = req.body
   knex("inventory")
