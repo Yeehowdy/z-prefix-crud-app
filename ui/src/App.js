@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext, createContext} from 'react'
 import {Route, Routes} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Navbar from './views/navbar.js'
+import Navbar from './views/navbar.js'
 import Signin from './views/signin.js'
 import Signup from './views/signup.js'
-import Home from './views/home.js'
+import Home from './views/table.js'
 
 export const UserContext = createContext();
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <UserContext.Provider value={{user, setUser}}>
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/signin" element={<Signin />}/> 
